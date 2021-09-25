@@ -4,6 +4,11 @@ var fs = require("fs");
 const express = require("express");
 const app = express();
 const mysql = require('mysql');
+const schedule = require('node-schedule');
+
+const job = schedule.scheduleJob('*/10 * * * * *', function(){
+  console.log('minden 10. másodperc');
+});
 
 const connection = mysql.createConnection({
   host: 'eu-cdbr-west-01.cleardb.com',
@@ -125,11 +130,3 @@ app.listen(process.env.PORT || 3000);
 
 // await browser.close();
 // })();
-
-// mysql://
-// bc23ff3f76d0a9
-// :
-// 5092a89f
-// @
-// eu-cdbr-west-01.cleardb.com
-// /heroku_8cbe72208086067?reconnect=true
