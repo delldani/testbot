@@ -3,6 +3,23 @@ const _ = require("lodash");
 var fs = require("fs");
 const express = require("express");
 const app = express();
+const mysql = require('mysql');
+
+const connection = mysql.createConnection({
+  host: 'eu-cdbr-west-01.cleardb.com',
+  user: 'bc23ff3f76d0a9',
+  password: '5092a89f',
+  database: 'heroku_8cbe72208086067'
+});
+connection.connect()
+
+connection.query('SELECT * FROM datas', function (err, rows, fields) {
+  if (err) throw err
+
+  console.log('első sor', rows[0])
+})
+
+connection.end()
 
 // app.use(express.static("public"));
 // app.use(express.urlencoded({ extended: true }));
@@ -109,3 +126,10 @@ app.listen(process.env.PORT || 3000);
 // await browser.close();
 // })();
 
+// mysql://
+// bc23ff3f76d0a9
+// :
+// 5092a89f
+// @
+// eu-cdbr-west-01.cleardb.com
+// /heroku_8cbe72208086067?reconnect=true
