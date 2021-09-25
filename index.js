@@ -7,9 +7,9 @@ const mysql = require('mysql');
 
 const connection = mysql.createConnection({
   host: 'eu-cdbr-west-01.cleardb.com',
-  user: 'bc23ff3f76d0a9',
-  password: '5092a89f',
-  database: 'heroku_8cbe72208086067'
+  user: 'b97cb50d2cb391',
+  password: 'fe636737',
+  database: 'heroku_f6b879ceb0d52a8'
 });
 connection.connect()
 
