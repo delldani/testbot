@@ -98,7 +98,7 @@ app.listen(process.env.PORT || 3000);
 
   // Set the cookies
 
-  await page.goto("http://www.delldani.hu");
+  await page.goto("https://www.argep.hu");
 
   // await page.setCookie({
   //   name: "euconsent-v2",
