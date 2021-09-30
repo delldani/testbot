@@ -26,13 +26,13 @@ const schedule = require("node-schedule");
 
 // connection.end()
 
-app.set("view engine", "ejs");
+// app.set("view engine", "ejs");
 
-app.get("/", (req, res) => {
-  res.render("index");
-});
+// app.get("/", (req, res) => {
+//   res.render("index");
+// });
 
-app.listen(process.env.PORT || 3000);
+// app.listen(process.env.PORT || 3000);
 // cookies = cookies.map((item) => {
 //   if (item.name === "euconsent-v2") {
 //     const newItem = {
@@ -48,13 +48,11 @@ app.listen(process.env.PORT || 3000);
 
 (async () => {
   const browser = await puppeteer.launch({
-    headless: false,
+    // headless: false,
     args: [
       // `--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36`,
-      `--proxy-server=51.81.82.175:80`,
-
+      // `--proxy-server=51.81.82.175:80`,
       // `--proxy-server=191.96.42.80:8080`,
-
       // `--proxy-server=37.17.169.80:46768`,
       // `--proxy-server=89.133.246.90:5678`,
     ],
@@ -79,10 +77,10 @@ app.listen(process.env.PORT || 3000);
     // "x-client-data":
     //   "CJC2yQEIpLbJAQjBtskBCKmdygEI7/LLAQie+csBCOqDzAEIzYTMAQjdhMwBCOeEzAEI+YTMARiOnssB",
   });
-  // await page.setViewport({
-  //   width: 1920,
-  //   height: 800,
-  // });
+  await page.setViewport({
+    width: 1920,
+    height: 800,
+  });
   // await page.evaluateOnNewDocument(() => {
   //   Object.defineProperty(navigator, "platform", { get: () => "Win 32" });
   //   Object.defineProperty(navigator, "productSub", { get: () => "20030107" });

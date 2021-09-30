@@ -13,6 +13,9 @@
     "mysql": "^2.18.1",
     "node-schedule": "^2.0.0",
     "puppeteer": "^10.2.0",
+    "puppeteer-extra": "^3.2.3",
+    "puppeteer-extra-plugin-stealth": "^2.8.1",
+    "random-useragent": "^0.5.0",
     "request-promise": "^4.2.6"
   }
 }
